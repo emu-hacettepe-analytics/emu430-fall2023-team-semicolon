@@ -2,7 +2,7 @@
 title: "Data"
 ---
 
-Data source: xxx
+Data source: [TUIK](https://data.tuik.gov.tr/)
 
 ```{r}
 #|output: true
