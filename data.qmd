@@ -10,3 +10,5 @@ library(readxl)
 data1 <- read_excel("C:/Users/kubil/Downloads/veri seti.xls")
 save(data1, file = "semicolon.RData")
 ```
+
+Download the data set : [semicolon.RData](https://github.com/emu-hacettepe-analytics/emu430-fall2023-team-semicolon/raw/master/semicolon.RData)
