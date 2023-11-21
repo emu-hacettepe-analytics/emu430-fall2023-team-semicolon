@@ -3,3 +3,10 @@ title: "Data"
 ---
 
 Data source: xxx
+
+```{r}
+#|output: true
+library(readxl)
+veri_seti <- read_excel("C:/Users/kubil/Downloads/veri seti.xls")
+veri_seti
+```
