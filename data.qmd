@@ -8,5 +8,5 @@ Data source: xxx
 #|output: true
 library(readxl)
 veri_seti <- read_excel("C:/Users/kubil/Downloads/veri seti.xls")
-veri_seti
+print(veri_seti)
 ```
