@@ -7,6 +7,6 @@ Data source: [TUIK](https://data.tuik.gov.tr/)
 ```{r}
 #|output: true
 library(readxl)
-veri_seti <- read_excel("C:/Users/kubil/Downloads/veri seti.xls")
-print(veri_seti)
+data1 <- read_excel("C:/Users/kubil/Downloads/veri seti.xls")
+save(data1, file = "semicolon.RData")
 ```
