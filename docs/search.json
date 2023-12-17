@@ -25,6 +25,34 @@
     "href": "data.html",
     "title": "Data",
     "section": "",
-    "text": "Data source: TUIK\n\n#|output: true\nlibrary(readxl)\ndata1 &lt;- read_excel(\"C:/Users/kubil/Downloads/veri seti.xls\")\nsave(data1, file = \"semicolon.RData\")\n\nDownload the data set : semicolon.RData\n\n\n\n Back to top"
+    "text": "Data source: TUIK\n\n#|output: true\nlibrary(readxl)\ndata1 &lt;- read_excel(\"C:/Users/kubil/Downloads/veri seti.xls\")\nsave(data1, file = \"semicolon.RData\")\n\nDownload the data set : semicolon.RData"
+  },
+  {
+    "objectID": "data.html#why-this-data-set",
+    "href": "data.html#why-this-data-set",
+    "title": "Data",
+    "section": "Why this data set?",
+    "text": "Why this data set?\nWe choose this data set based on this reasons:\n\nthere are so many observations in this data set\ndata has been divided into multiple categories\nsource of the data set is reliable (TUİK)"
+  },
+  {
+    "objectID": "data.html#what-are-the-categories-of-this-data-set",
+    "href": "data.html#what-are-the-categories-of-this-data-set",
+    "title": "Data",
+    "section": "What are the categories of this data set?",
+    "text": "What are the categories of this data set?\nThe reasons for suicides in this dataset are categorized into eight groups:\n\nillness\nfamily incompatibility\neconomic problems\nbusiness failure\nemotional relationships and not marrying the person wanted\neducational failure\nother\nunknown."
+  },
+  {
+    "objectID": "data.html#what-are-the-age-groups-of-this-data-set",
+    "href": "data.html#what-are-the-age-groups-of-this-data-set",
+    "title": "Data",
+    "section": "What are the age groups of this data set?",
+    "text": "What are the age groups of this data set?\nAge groups are classified as :\n\n&lt;15\n15-19\n20-24\n25-29\n30-34\n35-39\n40-44\n45-49\n50-54\n55-59\n60-64\n65-69\n70-74\n+75."
+  },
+  {
+    "objectID": "data.html#what-is-our-aim",
+    "href": "data.html#what-is-our-aim",
+    "title": "Data",
+    "section": "What is our aim?",
+    "text": "What is our aim?\nBy leveraging this dataset, we aim to answer the following questions:\n\nsuicide rates by gender regardless of age and reason\nsuicide rates by age regardless of gender and reason\nsuicide rates by reasons regardless of age and gender\nthe most observed reason for suicides for females/males\nthe most observed reason for suicides for teenagers\n\nBy obtaining answers to these questions, we can understand how to approach preventing suicides for different age groups and genders."
   }
 ]

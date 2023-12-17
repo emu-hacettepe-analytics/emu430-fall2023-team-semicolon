@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Semicolon’s Project Lab - Data</title>
+<title>Semicolon’ Project Lab - Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#importing-data-set" id="toc-importing-data-set" class="nav-link active" data-scroll-target="#importing-data-set">Importing Data Set</a></li>
+  <li><a href="#data-explanation" id="toc-data-explanation" class="nav-link" data-scroll-target="#data-explanation">Data Explanation</a>
+  <ul class="collapse">
+  <li><a href="#why-this-data-set" id="toc-why-this-data-set" class="nav-link" data-scroll-target="#why-this-data-set">Why this data set?</a></li>
+  <li><a href="#what-are-the-categories-of-this-data-set" id="toc-what-are-the-categories-of-this-data-set" class="nav-link" data-scroll-target="#what-are-the-categories-of-this-data-set">What are the categories of this data set?</a></li>
+  <li><a href="#what-are-the-age-groups-of-this-data-set" id="toc-what-are-the-age-groups-of-this-data-set" class="nav-link" data-scroll-target="#what-are-the-age-groups-of-this-data-set">What are the age groups of this data set?</a></li>
+  <li><a href="#what-is-our-aim" id="toc-what-is-our-aim" class="nav-link" data-scroll-target="#what-is-our-aim">What is our aim?</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
@@ -168,6 +181,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<section id="importing-data-set" class="level1">
+<h1>Importing Data Set</h1>
 <p>Data source: <a href="https://data.tuik.gov.tr/">TUIK</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|output: true</span></span>
@@ -176,8 +191,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(data1, <span class="at">file =</span> <span class="st">"semicolon.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Download the data set : <a href="https://github.com/emu-hacettepe-analytics/emu430-fall2023-team-semicolon/raw/master/semicolon.RData">semicolon.RData</a></p>
+</section>
+<section id="data-explanation" class="level1">
+<h1>Data Explanation</h1>
+<p>Our dataset classifies suicides between the years 2002-2022 based on <strong>reasons</strong>, <strong>gender</strong>, and <strong>age groups</strong>.</p>
+<section id="why-this-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-data-set">Why this data set?</h2>
+<p>We choose this data set based on this reasons:</p>
+<ul>
+<li><p>there are so many observations in this data set</p></li>
+<li><p>data has been divided into multiple categories</p></li>
+<li><p>source of the data set is reliable <strong>(TUİK)</strong></p></li>
+</ul>
+</section>
+<section id="what-are-the-categories-of-this-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-the-categories-of-this-data-set">What are the categories of this data set?</h2>
+<p>The reasons for suicides in this dataset are categorized into eight groups:</p>
+<ul>
+<li><p>illness</p></li>
+<li><p>family incompatibility</p></li>
+<li><p>economic problems</p></li>
+<li><p>business failure</p></li>
+<li><p>emotional relationships and not marrying the person wanted</p></li>
+<li><p>educational failure</p></li>
+<li><p>other</p></li>
+<li><p>unknown.</p></li>
+</ul>
+</section>
+<section id="what-are-the-age-groups-of-this-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-the-age-groups-of-this-data-set">What are the age groups of this data set?</h2>
+<p>Age groups are classified as :</p>
+<ul>
+<li><p>&lt;15</p></li>
+<li><p>15-19</p></li>
+<li><p>20-24</p></li>
+<li><p>25-29</p></li>
+<li><p>30-34</p></li>
+<li><p>35-39</p></li>
+<li><p>40-44</p></li>
+<li><p>45-49</p></li>
+<li><p>50-54</p></li>
+<li><p>55-59</p></li>
+<li><p>60-64</p></li>
+<li><p>65-69</p></li>
+<li><p>70-74</p></li>
+<li><p>+75.</p></li>
+</ul>
+</section>
+<section id="what-is-our-aim" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-our-aim">What is our aim?</h2>
+<p>By leveraging this dataset, we aim to answer the following questions:</p>
+<ul>
+<li><p>suicide rates by gender regardless of age and reason</p></li>
+<li><p>suicide rates by age regardless of gender and reason</p></li>
+<li><p>suicide rates by reasons regardless of age and gender</p></li>
+<li><p>the most observed reason for suicides for females/males</p></li>
+<li><p>the most observed reason for suicides for teenagers</p></li>
+</ul>
+<p>By obtaining answers to these questions, we can understand how to approach preventing suicides for different age groups and genders.</p>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

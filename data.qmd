@@ -2,6 +2,8 @@
 title: "Data"
 ---
 
+# Importing Data Set
+
 Data source: [TUIK](https://data.tuik.gov.tr/)
 
 ```{r}
@@ -12,3 +14,85 @@ save(data1, file = "semicolon.RData")
 ```
 
 Download the data set : [semicolon.RData](https://github.com/emu-hacettepe-analytics/emu430-fall2023-team-semicolon/raw/master/semicolon.RData)
+
+#  Data Explanation
+
+Our dataset classifies suicides between the years 2002-2022 based on **reasons**, **gender**, and **age groups**.
+
+## Why this data set?
+
+We choose this data set based on this reasons:
+
+-   there are so many observations in this data set
+
+-   data has been divided into multiple categories
+
+-   source of the data set is reliable **(TUİK)**
+
+## What are the categories of this data set?
+
+The reasons for suicides in this dataset are categorized into eight groups:
+
+-   illness
+
+-   family incompatibility
+
+-   economic problems
+
+-   business failure
+
+-   emotional relationships and not marrying the person wanted
+
+-   educational failure
+
+-   other
+
+-   unknown.
+
+## What are the age groups of this data set?
+
+Age groups are classified as :
+
+-   \<15
+
+-   15-19
+
+-   20-24
+
+-   25-29
+
+-   30-34
+
+-   35-39
+
+-   40-44
+
+-   45-49
+
+-   50-54
+
+-   55-59
+
+-   60-64
+
+-   65-69
+
+-   70-74
+
+-   +75.
+
+## What is our aim?
+
+By leveraging this dataset, we aim to answer the following questions:
+
+-   suicide rates by gender regardless of age and reason
+
+-   suicide rates by age regardless of gender and reason
+
+-   suicide rates by reasons regardless of age and gender
+
+-   the most observed reason for suicides for females/males
+
+-   the most observed reason for suicides for teenagers
+
+By obtaining answers to these questions, we can understand how to approach preventing suicides for different age groups and genders.
