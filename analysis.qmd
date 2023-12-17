@@ -15,6 +15,7 @@ We used the bar plot method to compare suicides by gender regardless of age and 
 -From this graph, we can observe that **men are more prone to suicide compared to women**.
 
 ```{r}
+#| output: false
 library(tidyverse) 
 library(dslabs)
 library(readxl)
