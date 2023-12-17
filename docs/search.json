@@ -25,7 +25,7 @@
     "href": "data.html",
     "title": "Data",
     "section": "",
-    "text": "Data source: TUIK\n\n#|output: true\nlibrary(readxl)\ndata1 &lt;- read_excel(\"C:/Users/kubil/Downloads/veri seti.xls\")\nsave(data1, file = \"semicolon.RData\")\n\nDownload the data set : semicolon.RData"
+    "text": "Data source: TUIK\n\nlibrary(readxl)\ndata1 &lt;- read_excel(\"C:/Users/kubil/Downloads/veri seti.xls\")\nsave(data1, file = \"semicolon.RData\")\n\nDownload the data set : semicolon.RData"
   },
   {
     "objectID": "data.html#why-this-data-set",
