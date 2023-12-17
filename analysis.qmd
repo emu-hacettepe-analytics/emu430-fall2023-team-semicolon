@@ -1,5 +1,9 @@
 ---
 title: "Analysis"
+format:
+  html:
+    code-tools: true
+    code-fold: true
 ---
 
 # Exploratory Data Analysis
