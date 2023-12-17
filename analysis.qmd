@@ -12,7 +12,7 @@ format:
 
 We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.![](images/Rplot.png)-From this graph, we can observe that **men are more prone to suicide compared to women**.
 
-``` r
+```{r}
 library(tidyverse) 
 library(dslabs)
 filtered_data_male <- filter(data1, Sex == "Male", `Age group`=="Total")
@@ -31,7 +31,7 @@ We used the bar plot method to compare suicides by age groups regardless of gend
 
 When looking at this graph, we observe that **suicides are most common among young adults** aged 20-24. We can say that as age progresses beyond 25, suicide rates tend to decrease. Another interesting result is that the age groups with the **lowest suicide rates are children and the elderly.**
 
-``` r
+```{r}
 library(tidyverse) 
 library(dslabs)
 filtered_data_1 <- filter(veri_seti,`Age group`=="<15", Sex == "Total")
