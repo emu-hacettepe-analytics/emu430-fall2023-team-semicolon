@@ -10,7 +10,9 @@ format:
 
 **Suicides by Gender**
 
-We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.![](images/Rplot.png)-From this graph, we can observe that **men are more prone to suicide compared to women**.
+We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.![](images/Rplot.png)
+
+-From this graph, we can observe that **men are more prone to suicide compared to women**.
 
 ```{r}
 library(tidyverse) 
