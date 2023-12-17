@@ -177,9 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploratory-data-analysis" class="level1">
 <h1>Exploratory Data Analysis</h1>
 <p><strong>Suicides by Gender</strong></p>
-<p>We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.</p>
-<p><img src="images/Rplot01.png" class="img-fluid"></p>
-<p>From this graph, we can observe that <strong>men are more prone to suicide compared to women</strong>.</p>
+<p>We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.<img src="images/Rplot.png" class="img-fluid">-From this graph, we can observe that <strong>men are more prone to suicide compared to women</strong>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>filtered_data_male <span class="ot">&lt;-</span> <span class="fu">filter</span>(data1, Sex <span class="sc">==</span> <span class="st">"Male"</span>, <span class="st">`</span><span class="at">Age group</span><span class="st">`</span><span class="sc">==</span><span class="st">"Total"</span>)</span>
@@ -190,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(data, <span class="at">names.arg =</span> <span class="fu">c</span>(<span class="st">"Male"</span>,<span class="st">"Female"</span>), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">main =</span> <span class="st">"Number of Suicides by Gender"</span>, <span class="at">xlab =</span> <span class="st">"Sex"</span>, <span class="at">ylab =</span> <span class="st">"Total"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Suicides by Age Groups</strong></p>
 <p>We used the bar plot method to compare suicides by age groups regardless of gender and reason. You can find the graph and the code we used below.</p>
-<p><img src="images/WhatsApp Image 2023-12-17 at 19.06.29.jpeg" class="img-fluid"></p>
+<p><img src="images/Rplot01.png" class="img-fluid"></p>
 <p>When looking at this graph, we observe that <strong>suicides are most common among young adults</strong> aged 20-24. We can say that as age progresses beyond 25, suicide rates tend to decrease. Another interesting result is that the age groups with the <strong>lowest suicide rates are children and the elderly.</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span>

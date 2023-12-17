@@ -6,11 +6,7 @@ title: "Analysis"
 
 **Suicides by Gender**
 
-We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.
-
-![](images/Rplot01.png)
-
-From this graph, we can observe that **men are more prone to suicide compared to women**.
+We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.![](images/Rplot.png)-From this graph, we can observe that **men are more prone to suicide compared to women**.
 
 ``` r
 library(tidyverse) 
@@ -27,7 +23,7 @@ barplot(data, names.arg = c("Male","Female"), col = "red", main = "Number of Sui
 
 We used the bar plot method to compare suicides by age groups regardless of gender and reason. You can find the graph and the code we used below.
 
-![](images/WhatsApp%20Image%202023-12-17%20at%2019.06.29.jpeg)
+![](images/Rplot01.png)
 
 When looking at this graph, we observe that **suicides are most common among young adults** aged 20-24. We can say that as age progresses beyond 25, suicide rates tend to decrease. Another interesting result is that the age groups with the **lowest suicide rates are children and the elderly.**
 
