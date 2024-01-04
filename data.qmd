@@ -1,5 +1,9 @@
 ---
 title: "Data"
+format:
+  html:
+    code-fold: true
+    code-tools: true
 ---
 
 # Importing Data Set
@@ -7,8 +11,14 @@ title: "Data"
 Data source: [TUIK](https://data.tuik.gov.tr/)
 
 ```{r}
+#| code-fold: true
+#| output: false
 library(readxl)
-data1 <- read_excel("C:/Users/kubil/Downloads/veri seti.xls")
+library(tidyverse)
+library(rvest)
+library(stringr)
+library(knitr)
+data1 <- read_excel("C:/Users/kubil/Desktop/veri seti.xls")
 save(data1, file = "semicolon.RData")
 ```
 
