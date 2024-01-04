@@ -32,31 +32,33 @@ Our dataset classifies suicides between the years 2002-2022 based on **reasons**
 
 We choose this data set based on this reasons:
 
--   there are so many observations in this data set
+-   There are so many observations in this data set
 
--   data has been divided into multiple categories
+-   Data has been divided into multiple categories
 
--   source of the data set is reliable **(TUİK)**
+-   Source of the data set is reliable **(TUİK)**
+
+-   Data set didn't need any preprocessing
 
 ## What are the categories of this data set?
 
 The reasons for suicides in this dataset are categorized into eight groups:
 
--   illness
+-   Illness
 
--   family incompatibility
+-   Family incompatibility
 
--   economic problems
+-   Economic problems
 
--   business failure
+-   Business failure
 
--   emotional relationships and not marrying the person wanted
+-   Emotional relationships and not marrying the person wanted
 
--   educational failure
+-   Educational failure
 
--   other
+-   Other
 
--   unknown.
+-   Unknown.
 
 ## What are the age groups of this data set?
 
@@ -94,14 +96,14 @@ Age groups are classified as :
 
 By leveraging this dataset, we aim to answer the following questions:
 
--   suicide rates by gender regardless of age and reason
+-   Suicide rates by gender regardless of age and reason
 
--   suicide rates by age regardless of gender and reason
+-   Suicide rates by age regardless of gender and reason
 
--   suicide rates by reasons regardless of age and gender
+-   Suicide rates by reasons regardless of age and gender
 
--   the most observed reason for suicides for females/males
+-   The most observed reason for suicides for females/males
 
--   the most observed reason for suicides for teenagers
+-   The most observed reason for suicides for teenagers
 
 By obtaining answers to these questions, we can understand how to approach preventing suicides for different age groups and genders.

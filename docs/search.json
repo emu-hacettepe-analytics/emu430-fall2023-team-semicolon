@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Team Semicolon",
     "section": "",
-    "text": "This is our project webpage.\nPlease stay tuned to follow our project activities.\nThis is our template.\n\nTeam Members\n\nDuygu Alsan\nKubilay Usta\nAhmet Şangüder\nAhmet Furkan Gökcük\nFikret Berkay Dilaver\n\n\n\nProject Topic\n\n\nData Set\n\n\n\n\n Back to top"
+    "text": "This is our project webpage.\nPlease stay tuned to follow our project activities.\nThis is our template.\n\nTeam Members\n\nDuygu Alsan\nKubilay Usta\nAhmet Şangüder\nAhmet Furkan Gökcük\nFikret Berkay Dilaver\n\n\n\nProject Topic\nWe did a study looking at how many people in Turkey took their own lives from 2002 to 2022. We wanted to understand if the increase in stress and the more news about suicide are making it seem like more people are doing it, or if there’s a real increase in suicides.\nIn our data set, we have details about when people did suicide, why they did it, how old they were, and if they were male or female. This data helps us see the patterns and changes in suicide rates over the twenty years. We can use this data to understand why people do this and how we can help them better.\n\n\n\n\n Back to top"
   },
   {
     "objectID": "about.html",
@@ -32,14 +32,14 @@
     "href": "data.html#why-this-data-set",
     "title": "Data",
     "section": "Why this data set?",
-    "text": "Why this data set?\nWe choose this data set based on this reasons:\n\nthere are so many observations in this data set\ndata has been divided into multiple categories\nsource of the data set is reliable (TUİK)"
+    "text": "Why this data set?\nWe choose this data set based on this reasons:\n\nThere are so many observations in this data set\nData has been divided into multiple categories\nSource of the data set is reliable (TUİK)\nData set didn’t need any preprocessing"
   },
   {
     "objectID": "data.html#what-are-the-categories-of-this-data-set",
     "href": "data.html#what-are-the-categories-of-this-data-set",
     "title": "Data",
     "section": "What are the categories of this data set?",
-    "text": "What are the categories of this data set?\nThe reasons for suicides in this dataset are categorized into eight groups:\n\nillness\nfamily incompatibility\neconomic problems\nbusiness failure\nemotional relationships and not marrying the person wanted\neducational failure\nother\nunknown."
+    "text": "What are the categories of this data set?\nThe reasons for suicides in this dataset are categorized into eight groups:\n\nIllness\nFamily incompatibility\nEconomic problems\nBusiness failure\nEmotional relationships and not marrying the person wanted\nEducational failure\nOther\nUnknown."
   },
   {
     "objectID": "data.html#what-are-the-age-groups-of-this-data-set",
@@ -53,7 +53,7 @@
     "href": "data.html#what-is-our-aim",
     "title": "Data",
     "section": "What is our aim?",
-    "text": "What is our aim?\nBy leveraging this dataset, we aim to answer the following questions:\n\nsuicide rates by gender regardless of age and reason\nsuicide rates by age regardless of gender and reason\nsuicide rates by reasons regardless of age and gender\nthe most observed reason for suicides for females/males\nthe most observed reason for suicides for teenagers\n\nBy obtaining answers to these questions, we can understand how to approach preventing suicides for different age groups and genders."
+    "text": "What is our aim?\nBy leveraging this dataset, we aim to answer the following questions:\n\nSuicide rates by gender regardless of age and reason\nSuicide rates by age regardless of gender and reason\nSuicide rates by reasons regardless of age and gender\nThe most observed reason for suicides for females/males\nThe most observed reason for suicides for teenagers\n\nBy obtaining answers to these questions, we can understand how to approach preventing suicides for different age groups and genders."
   },
   {
     "objectID": "analysis.html#suicides-by-gender",

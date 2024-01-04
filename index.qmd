@@ -23,4 +23,6 @@ This is our template.
 
 # Project Topic
 
-# Data Set
+We did a study looking at how many people in Turkey took their own lives from 2002 to 2022. We wanted to understand if the increase in stress and the more news about suicide are making it seem like more people are doing it, or if there's a real increase in suicides.
+
+In our data set, we have details about when people did suicide, why they did it, how old they were, and if they were male or female. This data helps us see the patterns and changes in suicide rates over the twenty years. We can use this data to understand why people do this and how we can help them better.
