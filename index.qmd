@@ -3,27 +3,33 @@ title: "Team Semicolon"
 sidebar: false 
 ---
 
-This is our project webpage.
+-   This is our project webpage.
 
-Please stay tuned to follow our project activities.
+-   Please stay tuned to follow our project activities.
 
-This is our template.
+-   This is our template.
+
+![](images/ingilizce-noktalama-isaretleri-noktali-virgul.jpg)
 
 # Team Members
 
-1.  [Duygu Alsan](https://emu-hacettepe-analytics.github.io/emu430-fall2023-duygualsan/)
+-   [Duygu Alsan](https://emu-hacettepe-analytics.github.io/emu430-fall2023-duygualsan/)
 
-2.  [Kubilay Usta](https://emu-hacettepe-analytics.github.io/emu430-fall2023-kubilayusta/)
+-   [Kubilay Usta](https://emu-hacettepe-analytics.github.io/emu430-fall2023-kubilayusta/)
 
-3.  [Ahmet Şangüder](https://emu-hacettepe-analytics.github.io/emu430-fall2023-AhmetSanguder/)
+-   [Ahmet Şangüder](https://emu-hacettepe-analytics.github.io/emu430-fall2023-AhmetSanguder/)
 
-4.  [Ahmet Furkan Gökcük](https://emu-hacettepe-analytics.github.io/emu430-fall2023-Furkangkck/)
+-   [Ahmet Furkan Gökcük](https://emu-hacettepe-analytics.github.io/emu430-fall2023-Furkangkck/)
 
-5.  [Fikret Berkay Dilaver](https://emu-hacettepe-analytics.github.io/emu430-fall2023-FBRKY/)
+-   [Fikret Berkay Dilaver](https://emu-hacettepe-analytics.github.io/emu430-fall2023-FBRKY/)
 
 # Project Topic
 
-We did a study looking at how many people in Turkey took their own lives from 2007 to 2022.
+-   Suicide numbers of Türkiye between 2007-2022.
+
+# Video Link
+
+-   <https://youtu.be/wo3vrbLSjLQ?si=EP7Mngah29s4UJXU>
 
 # Key Takeaways
 

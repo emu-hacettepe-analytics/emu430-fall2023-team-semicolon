@@ -331,9 +331,13 @@ lbls2 <- paste(lbls2,"%",sep="") # ad % to labels
 
 ```{r}
 #| codefold: true
+par(mfrow=c(1,2))     
+
 
 pie(slices2,lbls2, col=rainbow(length(lbls2)),
-   main="Pie Chart of Males' Suicide by Reasons",cex=0.8)
+   main="Pie Chart of Males' \n Suicide by Reasons",cex=0.8)
+pie(slices,lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of \n Suicide Reasons",cex=0.8)
 
 ```
 
@@ -370,17 +374,21 @@ graph <- cause %>%
 ```{r}
 #| codefold: true
 #| output: false
-slices = c(sum(as.numeric(a1$Total)),sum(as.numeric(a2$Total)),sum(as.numeric(a3$Total)),sum(ifelse(is.na(as.numeric(a4$Total)),0,as.numeric(a4$Total))),sum(ifelse(is.na(as.numeric(a5$Total)),0,as.numeric(a5$Total))),sum(ifelse(is.na(as.numeric(a6$Total)),0,as.numeric(a6$Total))),sum(as.numeric(a7$Total)),sum(as.numeric(a8$Total)))
+slices3 = c(sum(as.numeric(a1$Total)),sum(as.numeric(a2$Total)),sum(as.numeric(a3$Total)),sum(ifelse(is.na(as.numeric(a4$Total)),0,as.numeric(a4$Total))),sum(ifelse(is.na(as.numeric(a5$Total)),0,as.numeric(a5$Total))),sum(ifelse(is.na(as.numeric(a6$Total)),0,as.numeric(a6$Total))),sum(as.numeric(a7$Total)),sum(as.numeric(a8$Total)))
 name = c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown")
-lbls <- name
-pct <- round(slices/sum(slices)*100)
-lbls <- paste(lbls, pct)
+lbls3 <- name
+pct <- round(slices3/sum(slices3)*100)
+lbls3 <- paste(lbls3, pct)
 # add percents to labels
-lbls <- paste(lbls,"%",sep="") # ad % to labels
+lbls3 <- paste(lbls3,"%",sep="") # ad % to labels
 ```
 
 ```{r}
 #| codefold: true
-pie(slices,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Females' Suicide by Reasons",cex=0.5)
+par(mfrow=c(1,2))     
+
+pie(slices3,labels = lbls3, col=rainbow(length(lbls3)),
+   main="Pie Chart of Females' \n Suicide by Reasons",cex=0.5)
+pie(slices,lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of \n Suicide Reasons",cex=0.5)
 ```
