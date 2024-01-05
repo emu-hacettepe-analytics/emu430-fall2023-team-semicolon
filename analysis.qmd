@@ -35,6 +35,27 @@ data1 <- c(male,female)
 barplot(data1, names.arg = c("Male","Female"), col = "skyblue", main = "Number of Suicides by Gender", xlab = "Sex", ylab = "Total")
 ```
 
+```{r}
+#| codefold: true
+#| output: false
+b1 <- filter(data,Sex=="Male",`Age group`=="Total")
+b2 <- filter(data,Sex=="Female",`Age group`=="Total")
+
+slices <- c(sum(as.numeric(b1$Total)),sum(as.numeric(b2$Total)))
+
+lbls <- c("Male","Female")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct)
+# add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels
+```
+
+```{r}
+#| codefold: true
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Gender")
+```
+
 -From this graph, we can observe that **men are more prone to suicide compared to women**.
 
 ## **Suicides by Age Groups**
@@ -127,6 +148,7 @@ year21 = sum(as.numeric(ffiltered_data_21$Total))
 #| code-fold: true
 data3 = c(year1,year2,year3,year4,year5,year6,year7,year8,year9,year10,year11,year12,year13,year14,year15,year16,year17,year18,year19,year20,year21)
 barplot(data3, names.arg = c("2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"), col = "yellow", main = "Number of Suicides by Year", xlab = "Year", ylab = "Total")
+
 ```
 
 ```{r}
@@ -151,27 +173,149 @@ barplot(data4, names.arg = c("Illness","Family","Economy","Business","Emotional"
 ```
 
 ```{r}
+#| codefold: true
+#| output: false
 # Keep only 3 names
-illness = as.numeric(data$Illness)
-a = filter(data,Year != "2002",Year!="2003",`Age group`=="Total", Sex == "Total")
-a1 = data.frame(Year=a$Year,Total=a$Illness,Cause="Illness")
-a2 = data.frame(Year=a$Year,Total=a$`Family incompatibility`,Cause="Family")
-a3 = data.frame(Year=a$Year,Total=a$`Economic problems`,Cause="Economy")
-a4 = data.frame(Year=a$Year,Total=a$`Business failure`,Cause="Business")
-a5 = data.frame(Year=a$Year,Total=a$`Emotional relationship and not marrying the person wanted`,Cause="Emotional")
-a6 = data.frame(Year=a$Year,Total=a$`Educational failure`,Cause="Education")
-a7 = data.frame(Year=a$Year,Total=a$Other,Cause="Other")
-a8 = data.frame(Year=a$Year,Total=a$Unknown,Cause="Unknown")
-cause = rbind(a1,a2,a3,a4,a5,a6,a7,a8,deparse.level = 0)
-graph <- cause %>% 
-  filter(Cause %in% c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown"))
-b = as.numeric(cause$Total)
-c = ifelse(is.na(b),0,b)
-# Plot
-graph %>%
-  ggplot( aes(x=Year, y=c, group=Cause, color=Cause)) +
-    geom_line() +
-    ylab("Number of Suicides") +
-    ggtitle("Number of Suicides by Cause")
+  a = filter(data,Year != "2002",Year!="2003",`Age group`=="Total", Sex == "Total")
+  a1 = data.frame(Year=a$Year,Total=a$Illness,Cause="Illness")
+  a2 = data.frame(Year=a$Year,Total=a$`Family incompatibility`,Cause="Family")
+  a3 = data.frame(Year=a$Year,Total=a$`Economic problems`,Cause="Economy")
+  a4 = data.frame(Year=a$Year,Total=a$`Business failure`,Cause="Business")
+  a5 = data.frame(Year=a$Year,Total=a$`Emotional relationship and not marrying the person wanted`,Cause="Emotional")
+  a6 = data.frame(Year=a$Year,Total=a$`Educational failure`,Cause="Education")
+  a7 = data.frame(Year=a$Year,Total=a$Other,Cause="Other")
+  a8 = data.frame(Year=a$Year,Total=a$Unknown,Cause="Unknown")
+  cause = rbind(a1,a2,a3,a4,a5,a6,a7,a8,deparse.level = 0)
 ```
 
+```{r}
+#| codefold: true
+graph <- cause %>% 
+    filter(Cause %in% c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown"))
+  b = as.numeric(cause$Total)
+  c = ifelse(is.na(b),0,b)
+  graph %>%
+    ggplot( aes(x=Year, y=c, group=Cause, color=Cause)) +
+      geom_line() +
+      ylab("Number of Suicides") +
+      scale_y_log10() +
+      ggtitle("Number of Suicides by Reasons")
+```
+
+```{r}
+# Pie Chart with Percentages
+#| codefold: true
+#| output: false
+slices <- c(
+  sum(ifelse(is.na(as.numeric(a$Illness)),0,as.numeric(a$Illness))),
+  sum(ifelse(is.na(as.numeric(a$`Family incompatibility`)),0,as.numeric(a$`Family incompatibility`))) ,
+  sum(ifelse(is.na(as.numeric(a$`Economic problems`)),0,as.numeric(a$`Economic problems`))),
+  sum(ifelse(is.na(as.numeric(a$`Business failure`)),0,as.numeric(a$`Business failure`))),
+  sum(ifelse(is.na(as.numeric(a$`Emotional relationship and not marrying the person wanted`)),0,as.numeric(a$`Emotional relationship and not marrying the person wanted`))),
+  sum(ifelse(is.na(as.numeric(a$`Educational failure`)),0,as.numeric(a$`Educational failure`))),
+  sum(ifelse(is.na(as.numeric(a$Other)),0,as.numeric(a$Other))),sum(ifelse(is.na(as.numeric(a$Unknown)),0,as.numeric(a$Unknown))))
+
+lbls <- c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct)
+# add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels
+```
+
+```{r}
+#| codefold: true
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Suicide Reasons",cex=0.8)
+```
+
+```{r}
+#| codefold: true
+#| output: false
+  a = filter(data,Year != "2002",Year!="2003",`Age group`=="Total", Sex == "Male")
+  a1 = data.frame(Year=a$Year,Total=a$Illness,Cause="Illness")
+  a2 = data.frame(Year=a$Year,Total=a$`Family incompatibility`,Cause="Family")
+  a3 = data.frame(Year=a$Year,Total=a$`Economic problems`,Cause="Economy")
+  a4 = data.frame(Year=a$Year,Total=a$`Business failure`,Cause="Business")
+  a5 = data.frame(Year=a$Year,Total=a$`Emotional relationship and not marrying the person wanted`,Cause="Emotional")
+  a6 = data.frame(Year=a$Year,Total=a$`Educational failure`,Cause="Education")
+  a7 = data.frame(Year=a$Year,Total=a$Other,Cause="Other")
+  a8 = data.frame(Year=a$Year,Total=a$Unknown,Cause="Unknown")
+  cause = rbind(a1,a2,a3,a4,a5,a6,a7,a8,deparse.level = 0)
+  b = as.numeric(cause$Total)
+  c = ifelse(is.na(b),0,b)
+```
+
+```{r}
+#| codefold: true
+graph <- cause %>% 
+    filter(Cause %in% c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown"))
+  graph %>%
+    ggplot( aes(x=Year, y=c, group=Cause, color=Cause)) +
+      geom_line() +
+      ylab("Number of Suicides") +
+      ggtitle("Number of Males' Suicides by Reasons ")
+```
+
+```{r}
+#| codefold: true
+#| output: false
+slices = c(sum(as.numeric(a1$Total)),sum(as.numeric(a2$Total)),sum(as.numeric(a3$Total)),sum(as.numeric(a4$Total)),sum(as.numeric(a5$Total)),sum(ifelse(is.na(as.numeric(a6$Total)),0,as.numeric(a6$Total))),sum(as.numeric(a7$Total)),sum(as.numeric(a8$Total)))
+name = c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown")
+lbls <- name
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct)
+# add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels
+```
+
+```{r}
+#| codefold: true
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Males' Suicide by Reasons",cex=0.8)
+```
+
+```{r}
+#| codefold: true
+#| output: false
+  a = filter(data,Year != "2002",Year!="2003",`Age group`=="Total", Sex == "Female")
+  a1 = data.frame(Year=a$Year,Total=a$Illness,Cause="Illness")
+  a2 = data.frame(Year=a$Year,Total=a$`Family incompatibility`,Cause="Family")
+  a3 = data.frame(Year=a$Year,Total=a$`Economic problems`,Cause="Economy")
+  a4 = data.frame(Year=a$Year,Total=a$`Business failure`,Cause="Business")
+  a5 = data.frame(Year=a$Year,Total=a$`Emotional relationship and not marrying the person wanted`,Cause="Emotional")
+  a6 = data.frame(Year=a$Year,Total=a$`Educational failure`,Cause="Education")
+  a7 = data.frame(Year=a$Year,Total=a$Other,Cause="Other")
+  a8 = data.frame(Year=a$Year,Total=a$Unknown,Cause="Unknown")
+  cause = rbind(a1,a2,a3,a4,a5,a6,a7,a8,deparse.level = 0)
+  b = as.numeric(cause$Total)
+  c = ifelse(is.na(b),0,b)
+```
+
+```{r}
+#| codefold: true
+graph <- cause %>% 
+    filter(Cause %in% c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown"))
+  graph %>%
+    ggplot( aes(x=Year, y=c, group=Cause, color=Cause)) +
+      geom_line() +
+      ylab("Number of Suicides") +
+      ggtitle("Number of Females' Suicide by Reasons")
+```
+
+```{r}
+#| codefold: true
+#| output: false
+slices = c(sum(as.numeric(a1$Total)),sum(as.numeric(a2$Total)),sum(as.numeric(a3$Total)),sum(ifelse(is.na(as.numeric(a4$Total)),0,as.numeric(a4$Total))),sum(ifelse(is.na(as.numeric(a5$Total)),0,as.numeric(a5$Total))),sum(ifelse(is.na(as.numeric(a6$Total)),0,as.numeric(a6$Total))),sum(as.numeric(a7$Total)),sum(as.numeric(a8$Total)))
+name = c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown")
+lbls <- name
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct)
+# add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels
+```
+
+```{r}
+#| codefold: true
+pie(slices,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Females' Suicide by Reasons",cex=0.8)
+```
