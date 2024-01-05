@@ -189,7 +189,7 @@ We used the bar plot method to compare suicides by reason regardless of gender a
 fffiltered_data_1 <- filter(data,Age =="Total", Sex == "Total")
 cause1 = sum(as.numeric(fffiltered_data_1$Illness))
 cause2 = sum(as.numeric(fffiltered_data_1$Family))
-cause3 = sum(as.numeric(fffiltered_data_1$Economiy))
+cause3 = sum(as.numeric(fffiltered_data_1$Economy))
 cause4 = sum(as.numeric(fffiltered_data_1$Business))
 cause5 = sum(as.numeric(fffiltered_data_1$Emotional))
 cause6 = sum(as.numeric(fffiltered_data_1$Education))
@@ -210,7 +210,7 @@ This line chart shows the change in the causes of suicide over the years.
 #| codefold: true
 #| output: false
 # Keep only 3 names
-  a = filter(data,Age=="Total", Sex == "Male")
+  a = filter(data,Age=="Total", Sex =="Total")
   a1 = data.frame(Year=a$Year,Total=a$Illness,Cause="Illness")
   a2 = data.frame(Year=a$Year,Total=a$Family,Cause="Family")
   a3 = data.frame(Year=a$Year,Total=a$Economy,Cause="Economy")
@@ -261,7 +261,7 @@ lbls <- paste(lbls,"%",sep="") # ad % to labels
 
 ```{r}
 #| codefold: true
-pie(slices,labels = lbls, col=rainbow(length(lbls)),
+pie(slices,lbls, col=rainbow(length(lbls)),
    main="Pie Chart of Suicide Reasons",cex=0.8)
 ```
 
@@ -276,7 +276,7 @@ We interpreted the reasons why men commit suicide with a line chart.
 ```{r}
 #| codefold: true
 #| output: false
-  a = filter(a,Age=="Total", Sex == "Male")
+  a = filter(data,Age=="Total", Sex == "Male")
   a1 = data.frame(Year=a$Year,Total=a$Illness,Cause="Illness")
   a2 = data.frame(Year=a$Year,Total=a$Family,Cause="Family")
   a3 = data.frame(Year=a$Year,Total=a$Economy,Cause="Economy")
@@ -308,7 +308,7 @@ slices2 = c(sum(as.numeric(a1$Total)),sum(as.numeric(a2$Total)),sum(as.numeric(a
 name = c("Illness","Family","Economy","Business","Emotional","Education","Other","Unknown")
 lbls2 <- name
 pct <- round(slices2/sum(slices2)*100)
-lbls2 <- paste(lbls, pct)
+lbls2 <- paste(lbls2, pct)
 # add percents to labels
 lbls2 <- paste(lbls2,"%",sep="") # ad % to labels
 ```
@@ -316,7 +316,7 @@ lbls2 <- paste(lbls2,"%",sep="") # ad % to labels
 ```{r}
 #| codefold: true
 
-pie(slices,labels = lbls, col=rainbow(length(lbls)),
+pie(slices2,lbls2, col=rainbow(length(lbls2)),
    main="Pie Chart of Males' Suicide by Reasons",cex=0.8)
 
 ```
@@ -326,7 +326,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)),
 ```{r}
 #| codefold: true
 #| output: false
-  a = filter(data,Age=="Total", Sex == "Male")
+  a = filter(data,Age=="Total", Sex == "Female")
   a1 = data.frame(Year=a$Year,Total=a$Illness,Cause="Illness")
   a2 = data.frame(Year=a$Year,Total=a$Family,Cause="Family")
   a3 = data.frame(Year=a$Year,Total=a$Economy,Cause="Economy")
@@ -366,5 +366,5 @@ lbls <- paste(lbls,"%",sep="") # ad % to labels
 ```{r}
 #| codefold: true
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Females' Suicide by Reasons",cex=0.8)
+   main="Pie Chart of Females' Suicide by Reasons",cex=0.5)
 ```

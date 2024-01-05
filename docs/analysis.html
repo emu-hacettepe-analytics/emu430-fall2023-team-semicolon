@@ -383,7 +383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>fffiltered_data_1 <span class="ot">&lt;-</span> <span class="fu">filter</span>(data,Age <span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Total"</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>cause1 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Illness))</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>cause2 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Family))</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>cause3 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Economiy))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>cause3 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Economy))</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>cause4 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Business))</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>cause5 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Emotional))</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>cause6 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Education))</span>
@@ -407,7 +407,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only 3 names</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span><span class="st">"Total"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  a1 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Illness,<span class="at">Cause=</span><span class="st">"Illness"</span>)</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  a2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Family,<span class="at">Cause=</span><span class="st">"Family"</span>)</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  a3 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Economy,<span class="at">Cause=</span><span class="st">"Economy"</span>)</span>
@@ -463,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-codefold="true">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,<span class="at">labels =</span> lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Suicide Reasons"</span>,<span class="at">cex=</span><span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -478,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-codefold="true">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(a,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  a1 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Illness,<span class="at">Cause=</span><span class="st">"Illness"</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  a2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Family,<span class="at">Cause=</span><span class="st">"Family"</span>)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  a3 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Economy,<span class="at">Cause=</span><span class="st">"Economy"</span>)</span>
@@ -514,7 +514,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>name <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Illness"</span>,<span class="st">"Family"</span>,<span class="st">"Economy"</span>,<span class="st">"Business"</span>,<span class="st">"Emotional"</span>,<span class="st">"Education"</span>,<span class="st">"Other"</span>,<span class="st">"Unknown"</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> name</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>pct <span class="ot">&lt;-</span> <span class="fu">round</span>(slices2<span class="sc">/</span><span class="fu">sum</span>(slices2)<span class="sc">*</span><span class="dv">100</span>)</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> <span class="fu">paste</span>(lbls, pct)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> <span class="fu">paste</span>(lbls2, pct)</span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># add percents to labels</span></span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> <span class="fu">paste</span>(lbls2,<span class="st">"%"</span>,<span class="at">sep=</span><span class="st">""</span>) <span class="co"># ad % to labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -522,7 +522,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-codefold="true">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,<span class="at">labels =</span> lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices2,lbls2, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls2)),</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Males' Suicide by Reasons"</span>,<span class="at">cex=</span><span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -535,7 +535,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-codefold="true">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Female"</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  a1 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Illness,<span class="at">Cause=</span><span class="st">"Illness"</span>)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  a2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Family,<span class="at">Cause=</span><span class="st">"Family"</span>)</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  a3 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Economy,<span class="at">Cause=</span><span class="st">"Economy"</span>)</span>
@@ -580,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,<span class="at">labels =</span> lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Females' Suicide by Reasons"</span>,<span class="at">cex=</span><span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Females' Suicide by Reasons"</span>,<span class="at">cex=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="analysis_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
@@ -1185,7 +1185,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-207"><a href="#cb23-207" aria-hidden="true" tabindex="-1"></a>fffiltered_data_1 <span class="ot">&lt;-</span> <span class="fu">filter</span>(data,Age <span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Total"</span>)</span>
 <span id="cb23-208"><a href="#cb23-208" aria-hidden="true" tabindex="-1"></a>cause1 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Illness))</span>
 <span id="cb23-209"><a href="#cb23-209" aria-hidden="true" tabindex="-1"></a>cause2 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Family))</span>
-<span id="cb23-210"><a href="#cb23-210" aria-hidden="true" tabindex="-1"></a>cause3 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Economiy))</span>
+<span id="cb23-210"><a href="#cb23-210" aria-hidden="true" tabindex="-1"></a>cause3 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Economy))</span>
 <span id="cb23-211"><a href="#cb23-211" aria-hidden="true" tabindex="-1"></a>cause4 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Business))</span>
 <span id="cb23-212"><a href="#cb23-212" aria-hidden="true" tabindex="-1"></a>cause5 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Emotional))</span>
 <span id="cb23-213"><a href="#cb23-213" aria-hidden="true" tabindex="-1"></a>cause6 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(fffiltered_data_1<span class="sc">$</span>Education))</span>
@@ -1206,7 +1206,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-232"><a href="#cb23-232" aria-hidden="true" tabindex="-1"></a><span class="co">#| codefold: true</span></span>
 <span id="cb23-233"><a href="#cb23-233" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
 <span id="cb23-234"><a href="#cb23-234" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only 3 names</span></span>
-<span id="cb23-235"><a href="#cb23-235" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
+<span id="cb23-235"><a href="#cb23-235" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span><span class="st">"Total"</span>)</span>
 <span id="cb23-236"><a href="#cb23-236" aria-hidden="true" tabindex="-1"></a>  a1 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Illness,<span class="at">Cause=</span><span class="st">"Illness"</span>)</span>
 <span id="cb23-237"><a href="#cb23-237" aria-hidden="true" tabindex="-1"></a>  a2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Family,<span class="at">Cause=</span><span class="st">"Family"</span>)</span>
 <span id="cb23-238"><a href="#cb23-238" aria-hidden="true" tabindex="-1"></a>  a3 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Economy,<span class="at">Cause=</span><span class="st">"Economy"</span>)</span>
@@ -1257,7 +1257,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-287"><a href="#cb23-287" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-290"><a href="#cb23-290" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb23-291"><a href="#cb23-291" aria-hidden="true" tabindex="-1"></a><span class="co">#| codefold: true</span></span>
-<span id="cb23-292"><a href="#cb23-292" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,<span class="at">labels =</span> lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
+<span id="cb23-292"><a href="#cb23-292" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
 <span id="cb23-293"><a href="#cb23-293" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Suicide Reasons"</span>,<span class="at">cex=</span><span class="fl">0.8</span>)</span>
 <span id="cb23-294"><a href="#cb23-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-295"><a href="#cb23-295" aria-hidden="true" tabindex="-1"></a></span>
@@ -1272,7 +1272,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-306"><a href="#cb23-306" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb23-307"><a href="#cb23-307" aria-hidden="true" tabindex="-1"></a><span class="co">#| codefold: true</span></span>
 <span id="cb23-308"><a href="#cb23-308" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
-<span id="cb23-309"><a href="#cb23-309" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(a,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
+<span id="cb23-309"><a href="#cb23-309" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
 <span id="cb23-310"><a href="#cb23-310" aria-hidden="true" tabindex="-1"></a>  a1 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Illness,<span class="at">Cause=</span><span class="st">"Illness"</span>)</span>
 <span id="cb23-311"><a href="#cb23-311" aria-hidden="true" tabindex="-1"></a>  a2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Family,<span class="at">Cause=</span><span class="st">"Family"</span>)</span>
 <span id="cb23-312"><a href="#cb23-312" aria-hidden="true" tabindex="-1"></a>  a3 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Economy,<span class="at">Cause=</span><span class="st">"Economy"</span>)</span>
@@ -1304,7 +1304,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-342"><a href="#cb23-342" aria-hidden="true" tabindex="-1"></a>name <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Illness"</span>,<span class="st">"Family"</span>,<span class="st">"Economy"</span>,<span class="st">"Business"</span>,<span class="st">"Emotional"</span>,<span class="st">"Education"</span>,<span class="st">"Other"</span>,<span class="st">"Unknown"</span>)</span>
 <span id="cb23-343"><a href="#cb23-343" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> name</span>
 <span id="cb23-344"><a href="#cb23-344" aria-hidden="true" tabindex="-1"></a>pct <span class="ot">&lt;-</span> <span class="fu">round</span>(slices2<span class="sc">/</span><span class="fu">sum</span>(slices2)<span class="sc">*</span><span class="dv">100</span>)</span>
-<span id="cb23-345"><a href="#cb23-345" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> <span class="fu">paste</span>(lbls, pct)</span>
+<span id="cb23-345"><a href="#cb23-345" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> <span class="fu">paste</span>(lbls2, pct)</span>
 <span id="cb23-346"><a href="#cb23-346" aria-hidden="true" tabindex="-1"></a><span class="co"># add percents to labels</span></span>
 <span id="cb23-347"><a href="#cb23-347" aria-hidden="true" tabindex="-1"></a>lbls2 <span class="ot">&lt;-</span> <span class="fu">paste</span>(lbls2,<span class="st">"%"</span>,<span class="at">sep=</span><span class="st">""</span>) <span class="co"># ad % to labels</span></span>
 <span id="cb23-348"><a href="#cb23-348" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1312,7 +1312,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-352"><a href="#cb23-352" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb23-353"><a href="#cb23-353" aria-hidden="true" tabindex="-1"></a><span class="co">#| codefold: true</span></span>
 <span id="cb23-354"><a href="#cb23-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-355"><a href="#cb23-355" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,<span class="at">labels =</span> lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
+<span id="cb23-355"><a href="#cb23-355" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices2,lbls2, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls2)),</span>
 <span id="cb23-356"><a href="#cb23-356" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Males' Suicide by Reasons"</span>,<span class="at">cex=</span><span class="fl">0.8</span>)</span>
 <span id="cb23-357"><a href="#cb23-357" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-358"><a href="#cb23-358" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1322,7 +1322,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-364"><a href="#cb23-364" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb23-365"><a href="#cb23-365" aria-hidden="true" tabindex="-1"></a><span class="co">#| codefold: true</span></span>
 <span id="cb23-366"><a href="#cb23-366" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
-<span id="cb23-367"><a href="#cb23-367" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
+<span id="cb23-367"><a href="#cb23-367" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">=</span> <span class="fu">filter</span>(data,Age<span class="sc">==</span><span class="st">"Total"</span>, Sex <span class="sc">==</span> <span class="st">"Female"</span>)</span>
 <span id="cb23-368"><a href="#cb23-368" aria-hidden="true" tabindex="-1"></a>  a1 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Illness,<span class="at">Cause=</span><span class="st">"Illness"</span>)</span>
 <span id="cb23-369"><a href="#cb23-369" aria-hidden="true" tabindex="-1"></a>  a2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Family,<span class="at">Cause=</span><span class="st">"Family"</span>)</span>
 <span id="cb23-370"><a href="#cb23-370" aria-hidden="true" tabindex="-1"></a>  a3 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Year=</span>a<span class="sc">$</span>Year,<span class="at">Total=</span>a<span class="sc">$</span>Economy,<span class="at">Cause=</span><span class="st">"Economy"</span>)</span>
@@ -1362,7 +1362,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-410"><a href="#cb23-410" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb23-411"><a href="#cb23-411" aria-hidden="true" tabindex="-1"></a><span class="co">#| codefold: true</span></span>
 <span id="cb23-412"><a href="#cb23-412" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(slices,<span class="at">labels =</span> lbls, <span class="at">col=</span><span class="fu">rainbow</span>(<span class="fu">length</span>(lbls)),</span>
-<span id="cb23-413"><a href="#cb23-413" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Females' Suicide by Reasons"</span>,<span class="at">cex=</span><span class="fl">0.8</span>)</span>
+<span id="cb23-413"><a href="#cb23-413" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Pie Chart of Females' Suicide by Reasons"</span>,<span class="at">cex=</span><span class="fl">0.5</span>)</span>
 <span id="cb23-414"><a href="#cb23-414" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
