@@ -8,6 +8,22 @@ format:
 
 # Exploratory Data Analysis
 
+## Key Takeaways
+
+-   We did a study looking at how many people in Turkey took their own lives from 2007 to 2022. We wanted to understand if the increase in stress and the more news about suicide are making it seem like more people are doing it, or if there's a real increase in suicides.
+
+-   In our data set, we have details about when people did suicide, why they did it, how old they were, and if they were male or female. This data helps us see the patterns and changes in suicide rates over the twenty years. We can use this data to understand why people do this and how we can help them better. We took the data from TÜİK (Türkiye İstatistik Kurumu)
+
+-   A striking revelation emerges as male suicides prove to be three times more prevalent than female suicides, underscoring a concerning gender disparity.
+
+-   Furthermore, the primary cause of suicides is identified as illness, bringing attention to the crucial intersection of mental health and physical well-being.
+
+-   Notably, teenagers exhibit a pronounced inclination towards suicide, signifying a pressing concern for the mental health of this demographic.
+
+-   Overarching these findings is a troubling trend: the consistent increase in suicide numbers over the studied period.
+
+-   The important things we learned from this study tell a strong story. It doesn't just show important problems but also says we really need to do something about mental health issues in Turkey, and we need to do it quickly.
+
 ## Loading Libraries and Datasets
 
 ```{r}
