@@ -21,8 +21,17 @@ library(dplyr)
 library(ggplot2)
 library(viridis)
 library(hrbrthemes)
-data <- read_excel("C:/Users/kubil/Desktop/veri seti.xls")
-save(data, file = "semicolon.RData")
+data <- read_excel("C:/Users/kubil/Desktop/intihar.xls")
+save(data, file = "semicolon1.RData")
+nüfus <- read_excel("C:/Users/kubil/Desktop/nüfus.xlsx")
+save(nüfus, file = "semicolon2.RData")
+```
+
+We have data on the number of suicides between 2002 and 2022, but our population data is limited between 2007 and 2022. Since it is more logical to use suicide rate data, we will use data between 2007 and 2022.
+
+```{r}
+data <- filter(data,Year >= 2007)
+nüfus <- filter(nüfus,Yıl >= 2007,Düzey == "TÜRKİYE")
 ```
 
 ```{r}
@@ -96,6 +105,10 @@ barplot(data2, names.arg = c("<15","15-19","20-24","25-29","30-34","35-39","40-4
 
 When looking at this graph, we observe that **suicides are most common among young adults** aged 20-24. We can say that as age progresses beyond 25, suicide rates tend to decrease. Another interesting result is that the age groups with the **lowest suicide rates are children and the elderly.**
 
+## **Suicides by Year**
+
+We used the bar plot method to compare suicides by year regardless of gender, reason and age group. You can find the graph and the code we used below.
+
 ```{r}
 #| code-fold: true
 #| output: false
@@ -151,6 +164,14 @@ barplot(data3, names.arg = c("2002","2003","2004","2005","2006","2007","2008","2
 
 ```
 
+When looking at this graph, we observe that **suicides are most common in 2021 and 2022**.
+
+Factors such as people entering social isolation, losing their jobs, and experiencing financial difficulties due to the pandemic have made the phenomenon of suicide more painful.
+
+## **Suicides by Reason**
+
+We used the bar plot method to compare suicides by reason regardless of gender and age group. You can find the graph and the code we used below.
+
 ```{r}
 #| code-fold: true
 #| output: false
@@ -171,6 +192,8 @@ data4 = c(cause1,cause2,cause3,cause4,cause5,cause6,cause7,cause8)
 #| code-fold: true
 barplot(data4, names.arg = c("Illness","Family","Economy","Business","Emotional","Educational","Other","Unknown"), col = "brown", main = "Number of Suicides by Reason", xlab = "Suicide Reason", ylab = "Total",cex.names=0.72)
 ```
+
+This line chart shows the change in the causes of suicide over the years.
 
 ```{r}
 #| codefold: true
@@ -202,6 +225,10 @@ graph <- cause %>%
       ggtitle("Number of Suicides by Reasons")
 ```
 
+We can say that while the number of suicides due to business and education has decreased over time, the number of other suicides has remained almost constant.
+
+We used a pie chart to better analyze the ratios
+
 ```{r}
 # Pie Chart with Percentages
 #| codefold: true
@@ -227,6 +254,14 @@ lbls <- paste(lbls,"%",sep="") # ad % to labels
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
    main="Pie Chart of Suicide Reasons",cex=0.8)
 ```
+
+As a result, we see that if we ignore the unknowns, the Illness has a huge dominance.
+
+### **Suicides of Males by Reason**
+
+To obtain more meaningful results, we separated the data by gender.
+
+We interpreted the reasons why men commit suicide with a line chart.
 
 ```{r}
 #| codefold: true
@@ -273,6 +308,8 @@ lbls <- paste(lbls,"%",sep="") # ad % to labels
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
    main="Pie Chart of Males' Suicide by Reasons",cex=0.8)
 ```
+
+### **Suicides of Females by Reason**
 
 ```{r}
 #| codefold: true
