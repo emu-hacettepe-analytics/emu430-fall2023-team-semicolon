@@ -67,6 +67,10 @@ for (i in 1:16){
 data = filter(a,Year != 0)
 ```
 
+## Separeting Population from the Dataset
+
+-   In our analysis, we aimed to examine suicide numbers independently of the population. To achieve this, we divided the number of suicides for each year by the respective population of that year. Afterward, we determined the average population over the 16-year period. Multiplying the calculated values by this average population, we obtained suicide numbers adjusted for population variations. This method allowed us to isolate and understand the suicide trends more accurately, considering the fluctuations in population over the years.
+
 ## **Suicides by Gender**
 
 We used the bar plot method to compare suicides by gender regardless of age and reason. You can find the graph and the code we used below.
