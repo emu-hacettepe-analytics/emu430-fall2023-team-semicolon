@@ -18,15 +18,19 @@ library(tidyverse)
 library(rvest)
 library(stringr)
 library(knitr)
-data1 <- read_excel("C:/Users/kubil/Desktop/veri seti.xls")
-save(data1, file = "semicolon.RData")
+data <- read_excel("C:/Users/kubil/Desktop/intihar.xls")
+save(data, file = "semicolon1.RData")
+nüfus <- read_excel("C:/Users/kubil/Desktop/nüfus.xlsx")
+save(nüfus, file = "semicolon2.RData")
 ```
 
-Download the data set : [semicolon.RData](https://github.com/emu-hacettepe-analytics/emu430-fall2023-team-semicolon/raw/master/semicolon.RData)
+Download the data set (Suicides) : [semicolon1.RData](https://github.com/emu-hacettepe-analytics/emu430-fall2023-team-semicolon/raw/master/semicolon1.RData)
+
+Download the data set (Population) : [semicolon2.RData](https://github.com/emu-hacettepe-analytics/emu430-fall2023-team-semicolon/raw/master/semicolon2.RData)
 
 # Data Explanation
 
-Our dataset classifies suicides between the years 2002-2022 based on **reasons**, **gender**, and **age groups**.
+Our dataset classifies suicides between the years 2007-2022 based on **reasons**, **gender**, and **age groups**.
 
 ## Why this data set?
 
